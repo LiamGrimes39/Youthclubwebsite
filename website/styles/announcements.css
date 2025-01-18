@@ -1,0 +1,55 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .announcements-container {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  
+  .announcements-container h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .announcements-container p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  /* Announcements list */
+  .announcement-list {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .announcement-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .announcement-item h2 {
+    margin: 0;
+    color: #2c3e50;
+  }
+  
+  .announcement-item p {
+    margin: 0.5rem 0;
+    color: #555;
+  }
+  
+  .announcement-item p:first-of-type {
+    font-weight: bold;
+    color: #3498db;
+  }
+  

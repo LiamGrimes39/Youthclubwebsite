@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youth Club - Gallery</title>
+  <link rel="stylesheet" href="styles/navbar.css">
+  <link rel="stylesheet" href="styles/gallery.css">
+</head>
+<body>
+  <!-- Include Navbar -->
+  <div id="navbar"></div>
+
+  <main class="gallery-container">
+    <h1>Our Gallery</h1>
+    <p>Explore memories from our events and activities.</p>
+    <div class="gallery-grid">
+      <!-- Image items -->
+      <div class="gallery-item">
+        <img src="images/image1.jpg" alt="Event 1">
+      </div>
+      <div class="gallery-item">
+        <img src="images/image2.jpg" alt="Event 2">
+      </div>
+      <div class="gallery-item">
+        <img src="images/image3.jpg" alt="Event 3">
+      </div>
+      <div class="gallery-item">
+        <img src="images/image4.jpg" alt="Event 4">
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Youth Club. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Load the navbar
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+  </script>
+</body>
+</html>

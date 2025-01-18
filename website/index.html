@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youth Club - Home</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/navbar.css">
+</head>
+<body>
+  <!-- Include Navbar -->
+  <div id="navbar"></div>
+
+  <header class="hero">
+    <h1>Welcome to the Youth Club</h1>
+    <p>Building a brighter future together.</p>
+  </header>
+
+  <section class="about">
+    <h2>About Us</h2>
+    <p>We are a local youth club focused on empowering young minds through various activities and events.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Youth Club. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Dynamically load the navbar
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youth Club - Announcements</title>
+  <link rel="stylesheet" href="styles/navbar.css">
+  <link rel="stylesheet" href="styles/announcements.css">
+</head>
+<body>
+  <!-- Include Navbar -->
+  <div id="navbar"></div>
+
+  <main class="announcements-container">
+    <h1>Announcements</h1>
+    <p>Stay updated with the latest news and events from the Youth Club.</p>
+    <div id="announcement-list" class="announcement-list">
+      <!-- Announcements will be displayed here dynamically -->
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Youth Club. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Load the navbar
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+
+    // Load announcements dynamically
+    fetch('data/announcements.json')
+      .then(response => response.json())
+      .then(announcements => {
+        const list = document.getElementById('announcement-list');
+        announcements.forEach(announcement => {
+          const item = document.createElement('div');
+          item.className = 'announcement-item';
+          item.innerHTML = `
+            <h2>${announcement.title}</h2>
+            <p>${announcement.date}</p>
+            <p>${announcement.description}</p>
+          `;
+          list.appendChild(item);
+        });
+      });
+  </script>
+</body>
+</html>
