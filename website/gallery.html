@@ -1,3 +1,5 @@
+<!-- gallery.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,25 +13,41 @@
   <!-- Include Navbar -->
   <div id="navbar"></div>
 
-  <main class="gallery-container">
-    <h1>Our Gallery</h1>
-    <p>Explore memories from our events and activities.</p>
-    <div class="gallery-grid">
-      <!-- Image items -->
-      <div class="gallery-item">
-        <img src="images/image1.jpg" alt="Event 1">
-      </div>
-      <div class="gallery-item">
-        <img src="images/image2.jpg" alt="Event 2">
-      </div>
-      <div class="gallery-item">
-        <img src="images/image3.jpg" alt="Event 3">
-      </div>
-      <div class="gallery-item">
-        <img src="images/image4.jpg" alt="Event 4">
-      </div>
-    </div>
-  </main>
+<main class="gallery-container">
+  <h1>Our Gallery</h1>
+  <p>Explore memories from our events and activities, sorted by event type.</p>
+
+  <!-- Filter Dropdown -->
+  <div class="filter-bar">
+    <label for="filter-dropdown">Filter by Event: </label>
+    <select id="filter-dropdown">
+      <option value="" disabled selected>Choose an event...</option>
+      <option value="all">All</option>
+      <option value="cleanup-drive">Cleanup Drive</option>
+      <option value="sports-day">Sports Day</option>
+      <option value="annual-meeting">Annual Meeting</option>
+    </select>
+  </div>
+  
+
+  <!-- Event Galleries -->
+  <section id="cleanup-drive" class="event-gallery">
+    <h2>Cleanup Drive</h2>
+    <div class="gallery-grid" id="cleanup-drive-gallery"></div>
+  </section>
+
+  <section id="sports-day" class="event-gallery">
+    <h2>Sports Day</h2>
+    <div class="gallery-grid" id="sports-day-gallery"></div>
+  </section>
+
+  <section id="annual-meeting" class="event-gallery">
+    <h2>Annual Meeting</h2>
+    <div class="gallery-grid" id="annual-meeting-gallery"></div>
+  </section>
+</main>
+
+  
 
   <footer>
     <p>&copy; 2025 Youth Club. All rights reserved.</p>
@@ -43,5 +61,6 @@
         document.getElementById('navbar').innerHTML = data;
       });
   </script>
+  <script src="scripts/gallery.js"></script>
 </body>
 </html>

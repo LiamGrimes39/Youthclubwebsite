@@ -1,3 +1,5 @@
+/* gallery.cs */
+
 /* General styles */
 body {
     margin: 0;
@@ -42,4 +44,20 @@ body {
   .gallery-item img:hover {
     transform: scale(1.05);
   }
+
+/* Filter Dropdown */
+.filter-bar {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#filter-dropdown {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+
   

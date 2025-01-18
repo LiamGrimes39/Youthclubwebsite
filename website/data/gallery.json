@@ -1,0 +1,6 @@
+{
+    "cleanup-drive": ["images/cleanup-drive/image1.jpg", "images/cleanup-drive/image2.jpg"],
+    "sports-day": ["images/sports-day/image1.jpg", "images/sports-day/image2.jpg"],
+    "annual-meeting": ["images/annual-meeting/image1.jpg", "images/annual-meeting/image2.jpg"]
+  }
+  
